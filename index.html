@@ -11,10 +11,6 @@
 </head>
 
 <body>
-     <div style="text-align: center;" class="logo">
-    <img src="Logo SMA Bernas.jpg" height="200" width="150" alt="SMA Bernas Logo">
-  </div>
-    
     <div class="login-wrapper">
         <form action="#" class="form" onsubmit="auth(); return false;">
             <h2>Login</h2>
@@ -31,6 +27,8 @@
                     required
                 />
                 <label for="password">Password</label>
+                <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
+                <label for="showPassword">Show Password</label>
             </div>
             <input type="submit" value="Login" class="submit-btn" />
         </form>
@@ -110,7 +108,7 @@
             { email: "olehole01@gmail.com", password: "HARUNGANTENG", link: "https://docs.google.com/spreadsheets/d/10JYdF3f9aDJr4vZqQG5pD1bUBh8TuceY/edit#gid=19172718" },
         ];
 
-        function auth() {
+       function auth() {
             var email = document.getElementById("email").value;
             var password = document.getElementById("password").value;
 
@@ -125,7 +123,19 @@
                 alert("Invalid Information");
             }
         }
+
+        function togglePasswordVisibility() {
+            var passwordField = document.getElementById("password");
+            var showPasswordCheckbox = document.getElementById("showPassword");
+
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
     </script>
 </body>
 
 </html>
+
