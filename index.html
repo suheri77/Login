@@ -66,14 +66,15 @@
 </head>
 
 <body>
-    <div style="text-align: center;" class="logo">
+   <div style="text-align: center;" class="logo">
     <img src="Logo SMA Bernas.jpg" height="200" width="150" alt="SMA Bernas Logo">
   </div>
+    
     <div class="login-wrapper">
         <form action="#" class="form" onsubmit="auth(); return false;">
             <h2>Login</h2>
             <div class="input-group">
-                <input type="text" name="loginUser" id="email" required />
+                <input type="text" name="loginUser" id="email" required/>
                 <label for="email">Email address</label>
             </div>
 
@@ -85,12 +86,11 @@
                     required
                 />
                 <label for="password">Password</label>
-                <input type="checkbox" id="showPassword" onclick="togglePasswordVisibility()">
-                <label for="showPassword">Show Password</label>
             </div>
-            <input type="submit" value="Login" class="submit-btn" />
+            <input type="submit" value="Login" class="submit-btn"/>
         </form>
     </div>
+
 
     <script>
         var users = [
